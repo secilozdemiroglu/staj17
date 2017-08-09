@@ -1,0 +1,12 @@
+Design Pattern Nedir?
+
+
+Yazýlým geliþtirme sürecinde kodlarýn yeniden kullanýlabilirliðini saðlama, ortaya çýkan yazýlýmsal sorunlarý çözme ve
+bu çözümlerin standartlar haline getirip yeniden kullanýlabilir þekilde kodlanmasý sonucu oluþan sisteme Design Pattern 
+(tasarým þablonu) denir.
+
+Observer design pattern?
+
+Observer tasarým deseni behavior grubununa ait, bir nesnede meydana gelen deðiþikliklerde içinde bulundurduðu listede 
+bulunan nesnelere haber gönderen tasarým desenidir. Observer tasarým deseni, birbirleri ile bire çok iliþki olan nesneler 
+arasýnda olay bazlý bir etkileþim olduðu durumlarý düzenler.
