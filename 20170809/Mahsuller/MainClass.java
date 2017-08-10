@@ -8,7 +8,7 @@ public class MainClass {
 		GreenApple yesilelma = new GreenApple();
 		
 		Tomatoes Domates = new Tomatoes();
-		GoldenApple SarıElma = new GoldenApple();
+		GoldenApple SarÃ½Elma = new GoldenApple();
 		
 		RedApple.Peel();
 		
@@ -22,14 +22,8 @@ public class MainClass {
 
 		System.out.println(Domates.getSeedCount()+"\n" );
 	
-		System.out.println(SarıElma.getName());
-		System.out.println(SarıElma.getTaste());
-	
-		
-		
-	
-		
-		
+		System.out.println(SarÃ½Elma.getName());
+		System.out.println(SarÃ½Elma.getTaste());		
 	}
 
 }
