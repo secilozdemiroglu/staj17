@@ -1,7 +1,5 @@
-public  class Vegetable extends PlantIMPL {
-	
-	public String veggiename;	
-	
+public  class Vegetable extends PlantIMPL {	
+	public String veggiename;		
 	public String getName()	{
 		return veggiename; 			
 	}
