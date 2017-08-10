@@ -1,13 +1,8 @@
-
 public class GreenApple extends Apple {
-
-	public String getTaste()
-	{
+	public String getTaste(){
 		return "sour";
 	}
-
-public String getName()
-{
+public String getName(){
 	return "Sour "+this.getClass().getName();
-}
+	}
 }
