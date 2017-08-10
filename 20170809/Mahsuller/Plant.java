@@ -1,7 +1,4 @@
-
-public interface Plant {
-
-	
+public interface Plant {	
 	public  String getName();
 	
 }
