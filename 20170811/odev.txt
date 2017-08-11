@@ -1,0 +1,28 @@
+-Stored procedure nedir?
+
+Stored Procedure’ler parametre alabilen, parametre almasýna gerek kalmayan, kayýt edilebilen, tekrar sorgu edilmesine
+gerek kalmayan, deðer döndürebilen bir yordamdýr.
+
+-Commit ve rollback ne demektir? Kullanýmýný örnekle açýklayýnýz.
+
+Transactýon Ýfadeleri
+
+Transaction yönetimi için kullanýlan dört farklý ifade vardýr. Bu ifadeler ile transaction baþlatýlabilir (BEGIN), 
+iþlemler geri alýnabilir (ROLLBACK), transaction bitirilebilir (COMMIT) ya da kayýt noktalarý (SAVE) oluþturulabilir.
+
+COMMIT:
+Transaction’ýn tamamlandýðýný ve gerçekleþtirilen transaction iþlemlerinin kalýcý olarak veritabanýna yansýtýlmasý için 
+kullanýlýr. Transaction tarafýndan etkilenen tüm deðiþiklikler, iþlemlerin tamamý gerçekleþmese bile, bu iþlemden sonra 
+kalýcý hale gelir. COMMIT iþleminden sonra gerçekleþen deðiþikliklerin geri alýnmasý için, bu iþlemleri geri alacak yeni
+bir transaction oluþturulmalýdýr.
+
+COMMIT TRAN[SACTION] [transaction_ismi | @transaction_degiskeni]
+
+ROLLBACK: 
+Transaction’ýn gerçekleþtirdiði tüm iþlemleri geri almak için kullanýlýr. Yani, yapýlan tüm iþlemler transaction’ýn 
+baþlangýcýndaki haline geri döner. Verilerdeki deðiþikliklerin anýnda kalýcý olarak veritabanýna yansýtýlmadýðýný 
+belirtmiþtik. ROLLBACK ile gerçekleþtirilen tüm iþlemler geriye alýnarak transaction sonucunun tutarlýlýðý garanti edilir.
+ROLLBACK iþlemi, oluþturduðunuz transaction mimarisine baðlý olarak, kayýt noktalarýna (save points) geri dönüþ için de 
+kullanýlabilir.
+
+ROLLBACK TRAN[SACTION] [transaction_ismi | kayit_noktasi_ismi | @transaction_degiskeni | @kayit_noktasi_degiskeni]
