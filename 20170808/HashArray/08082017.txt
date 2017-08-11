@@ -1,0 +1,23 @@
+1) %50 þansým olduðuna inanarak ilk gürültü duyduðun tarafa yönelirdim. Çünkü gürültü muhtemelen kapýnýn altýndan gelmiþ
+olurdu.
+
+2)https://github.com/secilozdemiroglu/staj2017/blob/master/HashArray/MainClass.java
+
+3)MVC Nedir?; MVC, Model , View , Controller kelimelerinin baþ harflerinden oluþur ve her kelime MVC’nin farklý bir 
+katmanýný ifade eder.ASP.NET MVC, MVC pattern’ini ASP.NET’e eklemek için Microsoft’un geliþtirdiði framework’tür. 
+MVC uzun yýllardýr bir çok framework’te ve programlama dilinde kullanýlmýþ (Java, PHP, vb.) ve olgunlaþmýþ bir desendir.
+ASP.NET MVC sayesinde .Net framework dilleri ile MVC pattern kullanýlarak hýzlý çalýþan, test edilebilir, tekrar 
+kullanýlabilir parçalarý olabilen web uygulamalarý geliþtirilebilmesi saðlanmýþtýr.
+
+not defteri uygulamasý için iki adet class yazardým. 1-menü . Bu classta kaydet, çýkýþ,fontlar gibi deðerleri tutradým,
+2-yazdýr. Bu classýn görevi kendine gelen metini kaydetmek olurdu.
+
+
+4)JavaScript, applet veya baðýmsýz uygulamalar oluþturmaz. En yaygýn biçiminde, JavaScript HTML dokümanlarýnýn içinde 
+bulunur ve web sayfalarýnda basit HTML ile ulaþýlamayan etkileþim düzeyleri saðlar.
+Java ve JavaScript arasýndaki temel farklar:
+Java bir OOP programlama dilidir, Java Script bir OOP komut listesi oluþturma dilidir.
+Java, sanal makinede veya tarayýcýda çalýþan uygulamalar oluþturur, JavaScript kodu sadece tarayýcýda çalýþtýrýlýr.
+Java kodunun derlenmesi gerekir, JavaScript kodlarý metinlerden oluþur.
+Farklý eklentiler gerektirirler.
+JavaScript Client side çalýþýr.
