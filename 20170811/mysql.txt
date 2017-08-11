@@ -1,0 +1,6 @@
+SELECT * FROM persons INNER JOIN genders ON persons.Gender = genders.Id;
+
+SELECT persons.Id,persons.Name,persons.Surname,genders.description,persons.Email 
+FROM persons 
+INNER JOIN genders ON persons.Gender = genders.Id;
+
