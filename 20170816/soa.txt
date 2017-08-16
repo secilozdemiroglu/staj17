@@ -1,0 +1,16 @@
+SOA nedir?
+
+Soa (Service Oriented Architecture), servis tabanlý mimari anlamýna gelmektedir. Ýhtiyaçlarýn ve isteklerin çok hýzlý bir
+þekilde deðiþtiði sistemlerde çok hýzlý bir þekilde deðiþebilen mimari yapý ihtiyacýný karþýlayan yapýdýr.
+
+SOA uzun vadede uygulamalar arasýndaki entegrasyon maliyetlerini azaltmayý, kurumda iþ süreçlerini kýsaltmayý  ve dolaylý 
+yoldan da olsa ekonomik maliyetleri azaltmayý saðlar. Bunun dýþýnda SOA  mimarisi;
+· Servislerin(hizmetlerin) tekrar kullanýlabilirlik kazandýrmak,
+· Uygulamalar arasýnda bir standart belirlenerek birlikte çalýþmayý arttýrmak,
+· Ýþ süreçlerinin ve ihtiyaçlarýnýn daha kýsa sürede karþýlanmasýný saðlamak,
+SOA nýn hedefleri arasýndadýr.
+
+SOA’yý hiç bilmeyene nasýl anlatýrsýn?
+Anlamlý küçük parçacýklarýn belirli bir düzenle bir bütünü oluþturmasýný saðlayan mimari yapýdýr.
+bknz: The SOA Elephant - https://msdn.microsoft.com/en-us/library/bb833022.aspx
+Sonuç olarak SOA karmaþýk yapýlarý belirli bir düzene oturtan mimari yapýdýr.
