@@ -1,0 +1,7 @@
+- Singleton Pattern
+Case: Bir fabrikada her malzeme üretimi bir iþçi tarafýndan deftere kaydedilmektedir. Bu herhangi bir iþçi olabilir. 
+Ancak bu iþi ayný anda tek kiþi yapmalýdýr; yani deftere ayný anda 2 kiþi ulþamaz. Ýþi tek iþçinin yaptýðýndan emin 
+olmak üzere kodlayýnýz.
+ 
+ 
+Ek: Singleton pattern ne gibi durumlarda kullanýlýr? Kodun içerisine comment olarak ekleyelim.
