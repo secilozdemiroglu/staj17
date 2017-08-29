@@ -1,0 +1,13 @@
+- Filter Pattern
+Bir e-ticaret sitesi ürünlerini aþaðýdaki özelliklere göre gruplandýrmýþtýr.
+                             
+                              Mevsimine göre
+                                            Yazlýk ürün
+                                            Kýþlýk ürün
+                             
+                              Cinsiyete göre
+                                            Erkek giyim
+                                            Kadýn giyim
+                             
+Firma sitede yapýlan aramalarý bu gruplar altýnda loglamak istemektedir. Filter pattern ile bu durumu kodlayýnýz.
+Ek: Bu pattern ne gibi durumlarda kullanýlýr? Kodun içerisine comment olarak ekleyelim.
