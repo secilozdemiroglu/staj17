@@ -1,7 +1,7 @@
 /*
  * Filter Pattern 
- * Filter Pattern bu örnekte olduğu gibi istenilen verileri kategorize etmekte kullanılabilir.
- * Ya da filtre ile kullanıcının işlem öncesi login yaptığını kontrol edebiliriz. 
+ * Filter Pattern bu Ã¶rnekte olduÄŸu gibi istenilen verileri kategorize etmekte kullanÄ±labilir.
+ * Filtre ile kullanÄ±cÄ±nÄ±n iÅŸlem Ã¶ncesi login yaptÄ±ÄŸÄ±nÄ± kontrol edebiliriz ya da hata ayÄ±klamada kullanabiliriz. 
  */
 
 import java.util.ArrayList;
@@ -13,12 +13,12 @@ public class Main {
 
 		List<Bilgiler> bilgi = new ArrayList<Bilgiler>();
 
-		bilgi.add(new Bilgiler("Ceket","Erkek", "Kışlık"));
-		bilgi.add(new Bilgiler("Gömlek", "Erkek", "Yazlık"));
-		bilgi.add(new Bilgiler("Elbise", "Kadın", "Kışlık"));
-		bilgi.add(new Bilgiler("Blüz", "Kadın", "Yazlık"));
-		bilgi.add(new Bilgiler("Pantolon", "Erkek", "Kışlık"));
-		bilgi.add(new Bilgiler("Pantolon", "Kadın", "Kışlık"));
+		bilgi.add(new Bilgiler("Ceket","Erkek", "KÄ±ÅŸlÄ±k"));
+		bilgi.add(new Bilgiler("GÃ¶mlek", "Erkek", "YazlÄ±k"));
+		bilgi.add(new Bilgiler("Elbise", "KadÄ±n", "KÄ±ÅŸlÄ±k"));
+		bilgi.add(new Bilgiler("BlÃ¼z", "KadÄ±n", "YazlÄ±k"));
+		bilgi.add(new Bilgiler("Pantolon", "Erkek", "KÄ±ÅŸlÄ±k"));
+		bilgi.add(new Bilgiler("Pantolon", "KadÄ±n", "KÄ±ÅŸlÄ±k"));
 
 	      Kriter erkek = new FiltreErkek();
 	      Kriter kadin = new FiltreKadin();
@@ -30,26 +30,26 @@ public class Main {
 	      System.out.println("Erkek Giyim: ");
 	      printKosul(erkek.filterpattern(bilgi));
 
-	      System.out.println("\nKadın Giyim: ");
+	      System.out.println("\nKadÄ±n Giyim: ");
 	      printKosul(kadin.filterpattern(bilgi));
 	      
-	      System.out.println("\nKışlıklar: ");
+	      System.out.println("\nKÄ±ÅŸlÄ±klar: ");
 	      printKosul(kis.filterpattern(bilgi));
 	      
-	      System.out.println("\nYazlıklar: ");
+	      System.out.println("\nYazlÄ±klar: ");
 	      printKosul(yaz.filterpattern(bilgi));
 
-	      System.out.println("\nYazlıklar Ve Kışlıklar : ");
+	      System.out.println("\nYazlÄ±klar Ve KÄ±ÅŸlÄ±klar : ");
 	      printKosul(yazlikvekislik.filterpattern(bilgi));
 
-	      System.out.println("\nKadın Giyim Veya Yazlıklar: ");
+	      System.out.println("\nKadÄ±n Giyim Veya YazlÄ±klar: ");
 	      printKosul(kadinveyayazlik.filterpattern(bilgi));
 	   }
 
 	   public static void printKosul(List<Bilgiler> filtrele){
 	   
 	      for (Bilgiler bilgi : filtrele) {
-	         System.out.println("Ürün : " + bilgi.getUrun() + ", Ciniyet : " + bilgi.getCins() + ", Mevsim : " + bilgi.getMevsim() );
+	         System.out.println("ÃœrÃ¼n : " + bilgi.getUrun() + ", Ciniyet : " + bilgi.getCins() + ", Mevsim : " + bilgi.getMevsim() );
 	      }
 
 	}
