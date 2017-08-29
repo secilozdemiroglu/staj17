@@ -1,0 +1,22 @@
+- Builder Pattern
+Case: Bir araba fabrikasý farklý 3 model araba üretebilmektedir. Araçlarýn özellikleri þu þekildedir.
+               Model 1
+               Ýsim: Andromeda
+               Fiyat: 30000$
+               Renk seçenekleri: Mavi, Yeþil
+              
+               Model 2
+               Ýsim: MilkyWay
+               Fiyat: 33000$
+               Renk seçenekleri: Siyah, Kýrmýzý
+              
+               Model 3
+               Ýsim: AlphaCentauri
+               Fiyat: 35000$
+               Renk seçenekleri: Kýrmýzý, Lacivert
+              
+Araçlar iki kademede üretilmektedir.
+               1 - Mekanik imalat
+               2 - Boya
+Fabrikanýn sipariþ sistemi tekildir. Yani her araç için ayný sipariþ formu kullanýlmaktadýr. Form içerisinde birden fazla farklý araç farklý sayýlarda bulunabilir (1 adet Andromeda, 3 adet AlphaCentauri gibi)
+Bu þartlarý göz önünde bulundurarak Builder Pattern ile yukarýda anlatýlan durumu kodsal olarak yansýtan classlarý hazýrlayýn.
