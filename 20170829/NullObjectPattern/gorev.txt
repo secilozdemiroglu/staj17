@@ -1,0 +1,10 @@
+ Null Object Pattern
+Bir e-ticaret sitesi ön sipariþ almaktadýr. Sipariþi alýnan ürün stokta olmasa dahi önyüzde gösterilmekte ve sistem
+sipariþe izin vermektedir. Null Object Pattern kullanarak bu durumu kodlayýnýz.
+               Stokta olan ürünler
+                              Ceket
+                              Pantolon
+                              Ayakkabý
+               Stokta olmayan ürünler
+                              T-Shirt
+                              Gözlük
