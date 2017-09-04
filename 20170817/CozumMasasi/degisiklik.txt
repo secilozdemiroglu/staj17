@@ -1,0 +1,4 @@
+Web arayüz anasayfa tasarýmý
+bootstrap framework kullanýmý
+font awesome kullanýmý
+bazý sql sorgular (istatistikler,son eklenen hatalar)
