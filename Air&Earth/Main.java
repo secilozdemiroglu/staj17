@@ -2,19 +2,16 @@
 public class Main {
 
 	public static void detectElement(Object o) {
-		switch (o.getClass().getName()) {
-		case "Air":
+		
+
+		if (o instanceof Air) {
 			System.out.println("Take a deep breath");
-			break;
-		case "Earth":
+		} else if (o instanceof Earth) {
 			System.out.println("Walk of life");
-			break;
-
-		default:
+		} else {
 			System.out.println("Why do we exist?");
-			break;
 		}
-
+		
 	}
 
 	public static void main(String[] args) {
@@ -23,7 +20,7 @@ public class Main {
 
 		detectElement(a);
 		detectElement(e);
-	    detectElement(args);
+		detectElement(args);
 	}
 
 }
