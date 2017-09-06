@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+	
+	function seninFonksiyonun(element) {		
+			
+			if(element.value=="x"||element.value=="o"||element.value=="X"||element.value=="O"){
+				$(element).prop('disabled', true);
+				checkWon();
+			}else{
+				alert("yanlýþ giris");
+				element.value="";		
+			}		 				
+	}
+
+	function checkWon() {
+
+		var lines = [
+			[ 1, 2, 3 ],
+            [ 4, 5, 6 ],
+            [ 7, 8, 9 ],
+            [ 1, 4, 7 ],
+            [ 2, 5, 8 ],
+			[ 3, 6, 9 ],
+            [ 1, 5, 9 ],
+            [ 7, 5, 3 ]
+		];
+		
+		var indexes = new Array(); 
+
+		for (var i = 1; i <= 9; i++) {
+			console.log($("#"+i).val());
+			
+			if ( $("#"+i).val() == "x" ){
+				indexes.push(i);
+			}
+			
+		}   
+		
+		for (var i = 0; i < 8 ; i++) {
+			var line= lines[i];
+			counter=0;
+			for (var j = 0; j < 3; j++) {
+				for(k=0; k<indexes.length; k++){
+					if(indexes[k]== line[j]){
+						counter++;
+					}
+					if(counter==3){
+						alert("Kazandýnýz!");
+						
+					}
+				}							
+			}				
+		} 
+			
+	}
+		
+</script>
+
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+		width:50px; 
+		height:50px;
+	}
+	input{
+		width:100%;
+		height:100%;
+		maxlength=1;
+		text-align:center;
+		font-size:30px;
+	}
+
+
+</style>
+</head>
+
+
+<body>
+<div class='container' style='margin-top:40px; margin-left:200px; margin-right:200px;'>
+
+<table>
+  <tr > 
+    <td ><input id="1" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td> 
+    <td ><input id="2" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+    <td ><input id="3" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+  </tr >               
+  <tr >                
+    <td ><input id="4" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+    <td ><input id="5" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+    <td ><input id="6" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+  </tr>                
+  <tr >                
+    <td ><input id="7" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+    <td ><input id="8" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+    <td ><input id="9" onchange="seninFonksiyonun(this)" type="text" title="x veya o yazýnýz!"  maxlength="1"></td>
+  </tr>
+  
+</table>
+</div>
+<div id="report"></div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+	function seninFonksiyonun(element) {
+		alert(element.value);
+	}
+	
+$(document).ready(function(){
+	
+	$("input[type='text']").on(	 "change", function() {
+	  alert( "Handler for .change() called." );
+  	});
+
+});
+</script>
+</html>
