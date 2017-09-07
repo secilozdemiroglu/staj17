@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	
+	$(document).ready(function(){
+		
+		var pane = $('#pane'),
+		box = $('#box'),
+		w = pane.width() - box.width(),
+		d = {},
+		x = 3;
+			function newv(v,a,b) {
+				var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+				return n < 0 ? 0 : n > w ? w : n;
+			}
+		$(window).keydown(function(e) { d[e.which] = true; });
+		$(window).keyup(function(e) { d[e.which] = false; });
+
+		setInterval(function() {
+			box.css({
+				left: function(i,v) { return newv(v, 37, 39); }
+			});
+		}, 8);
+		
+		$(window).keyup(function(){
+			$('#pic').css({
+				left: Math.floor((Math.random() * 880) + 60),
+				top: Math.floor((Math.random() * 440) + 60),
+				
+			});
+		});			
+	});	
+	
+		
+</script>
+<style>
+
+	#pane {
+		position:relative;
+		width:1000px; height:600px;
+		border:2px solid red;
+	}    
+	#box {
+		position:absolute; top:580px; left:460px;
+		width:130px; height:20px;          
+		background-color:blue;
+	}
+	#pic {
+    position:absolute;
+	top:0px;
+	left:0px;
+    width:60px;
+    height:60px;
+    
+	}
+
+</style>
+</head>
+<body>
+		<div class='hizala' style='margin-top:5px; margin-left:170px;'>
+			<div id="pane">
+				<canvas id="ball" width="1000px" height="580px" ></canvas>					
+				 <div id="pic" ><img src="penguin.png"></div>
+				<div id="box" ></div>
+			</div>
+			<p id="demo" style='text-align:center;'>
+			  Mavi çubuðu hareket ettirmek için yön tuþlarýný kullanýn!
+			</p>
+			<p id="demo1"></p>
+		</div>
+		
+		<script>
+			var canvas = document.getElementById("ball");
+			var c = canvas.getContext("2d");
+			var container = {
+			  x: 0,
+			  y: 0,
+			  width: 1000,
+			  height: 580
+			};
+			
+			var circle = {
+			  x: 40,
+			  y: 40,
+			  r: 15,
+			  vx: 2,
+			  vy: 4,
+			  color: 125
+			
+			};
+					
+			function animate() {
+			  c.fillStyle = '#ffffff';
+			  c.fillRect(container.x, container.y, container.width, container.height);
+				
+			  c.fillStyle = 'hsl(' + circle.color + ', 100%, 50%)';
+			  c.beginPath();
+			  c.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, true);
+			  c.fill()
+			  
+				if (circle.x - circle.r + circle.vx < container.x || circle.x + circle.r + circle.vx > container.x + container.width) {
+				  circle.vx = -circle.vx;	
+				  
+				}
+			
+				if (circle.y - circle.r + circle.vy < container.y ) {
+				  circle.vy = -circle.vy;	
+					
+				}
+				if (circle.y + circle.r + circle.vy > container.y + container.height) {
+				 
+					boxsol = $("#box").position().left;
+					boxsag = $("#box").position().left + 130;
+					
+					if( boxsol-10 < circle.x && circle.x < boxsag + 10){
+						circle.vy = -circle.vy;
+						circle.vx=circle.vx+0.3;
+						circle.vy=circle.vy-0.3;
+						
+					}					
+					else{			
+						alert("Kaybettiniz");
+						circle.vy = -circle.vy;
+						location.reload();
+						
+					}
+			  	 
+				}
+				circle.x += circle.vx
+				circle.y += circle.vy
+				
+			  requestAnimationFrame(animate);
+			}
+			requestAnimationFrame(animate);
+		</script>
+</body>
+</html>
