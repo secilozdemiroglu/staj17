@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var pane = $('#pane'),
+		box = $('#box'),
+		w = pane.width() - box.width(),
+		d = {},
+		x = 3;
+
+		function newv(v,a,b) {
+			var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+			return n < 0 ? 0 : n > w ? w : n;
+		}
+
+		$(window).keydown(function(e) { d[e.which] = true; });
+		$(window).keyup(function(e) { d[e.which] = false; });
+
+		setInterval(function() {
+			box.css({
+				left: function(i,v) { return newv(v, 37, 39); },
+				//top: function(i,v) { return newv(v, 38, 40); }
+			});
+		}, 20);
+	});
+</script>
+<style>
+
+	#pane {
+		position:relative;
+		width:1000px; height:600px;
+		border:2px solid red;
+	}
+    
+	#box {
+		position:absolute; top:580px; left:460px;
+		width:100px; height:20px;          
+		background-color:blue;
+	}
+
+</style>
+</head>
+
+<body>
+		<div class='container' style='margin-top:10px; margin-left:170px;'>
+			<div id="pane">
+				<div id="box"></div>
+			</div>
+			<p style='text-align:center;'>
+			  Oyuna baþlamak için kýrmýzý çerçevenin içine týklayýn!, Mavi kutucuðu hareket ettirmek için yön tuþlarýný kullanýn!
+			</p>
+		</div>
+</body>
+</html>
