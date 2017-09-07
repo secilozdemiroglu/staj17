@@ -24,7 +24,8 @@
 			});
 		}, 8);
 		
-	});		
+	});
+		
 		
 </script>
 <style>
@@ -43,6 +44,7 @@
 
 </style>
 </head>
+
 <body>
 		<div class='hizala' style='margin-top:5px; margin-left:170px;'>
 			<div id="pane">
@@ -87,7 +89,7 @@
 				  circles[0].vx = -circles[0].vx;
 				}
 
-				if (circles[0].y + circles[0].r + circles[0].vy > container.y + container.height || circles[0].y - circles[0].r + circles[0].vy < container.y) {
+				if (circles[0].y - circles[0].r + circles[0].vy < container.y || circles[0].y + circles[0].r + circles[0].vy > container.y + container.height) {
 				  circles[0].vy = -circles[0].vy;
 				}
 
