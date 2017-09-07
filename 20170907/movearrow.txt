@@ -3,28 +3,34 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+
 	$(document).ready(function(){
+		
 		var pane = $('#pane'),
 		box = $('#box'),
 		w = pane.width() - box.width(),
 		d = {},
 		x = 3;
-
-		function newv(v,a,b) {
-			var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
-			return n < 0 ? 0 : n > w ? w : n;
-		}
-
+			function newv(v,a,b) {
+				var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+				return n < 0 ? 0 : n > w ? w : n;
+			}
 		$(window).keydown(function(e) { d[e.which] = true; });
 		$(window).keyup(function(e) { d[e.which] = false; });
 
 		setInterval(function() {
 			box.css({
-				left: function(i,v) { return newv(v, 37, 39); },
-				//top: function(i,v) { return newv(v, 38, 40); }
+				left: function(i,v) { return newv(v, 37, 39); }
 			});
-		}, 20);
+		}, 8);
+		
 	});
+	
+		
+
+		
+		
 </script>
 <style>
 
@@ -36,7 +42,7 @@
     
 	#box {
 		position:absolute; top:580px; left:460px;
-		width:100px; height:20px;          
+		width:130px; height:20px;          
 		background-color:blue;
 	}
 
@@ -44,13 +50,59 @@
 </head>
 
 <body>
-		<div class='container' style='margin-top:10px; margin-left:170px;'>
+		<div class='hizala' style='margin-top:5px; margin-left:170px;'>
 			<div id="pane">
+					<canvas id="drawball" width="1000px" height="580px"></canvas>					
 				<div id="box"></div>
 			</div>
 			<p style='text-align:center;'>
-			  Oyuna baþlamak için kýrmýzý çerçevenin içine týklayýn!, Mavi kutucuðu hareket ettirmek için yön tuþlarýný kullanýn!
+			  Mavi Ã§ubuÄŸu hareket ettirmek iÃ§in yÃ¶n tuÅŸlarÄ±nÄ± kullanÄ±n!
 			</p>
 		</div>
+		
+		<script>
+			var canvas = document.getElementById("drawball");
+			var c = canvas.getContext("2d");
+			var container = {
+			  x: 0,
+			  y: 0,
+			  width: 1000,
+			  height: 580
+			};
+			
+			var circles = [{
+			  x: 40,
+			  y: 40,
+			  r: 15,
+			  vx: 2,
+			  vy: 4,
+			  color: 125
+			
+			}];
+
+			function animate() {
+			  c.fillStyle = '#ffffff';
+			  c.fillRect(container.x, container.y, container.width, container.height);
+				
+			  c.fillStyle = 'hsl(' + circles[0].color + ', 100%, 50%)';
+			  c.beginPath();
+			  c.arc(circles[0].x, circles[0].y, circles[0].r, 0, Math.PI * 2, true);
+			  c.fill()
+
+				if (circles[0].x - circles[0].r + circles[0].vx < container.x || circles[0].x + circles[0].r + circles[0].vx > container.x + container.width) {
+				  circles[0].vx = -circles[0].vx;
+				}
+
+				if (circles[0].y + circles[0].r + circles[0].vy > container.y + container.height || circles[0].y - circles[0].r + circles[0].vy < container.y) {
+				  circles[0].vy = -circles[0].vy;
+				}
+
+				circles[0].x += circles[0].vx
+				circles[0].y += circles[0].vy
+			 
+			  requestAnimationFrame(animate);
+			}
+			requestAnimationFrame(animate);
+		</script>
 </body>
 </html>
