@@ -23,10 +23,9 @@
 				left: function(i,v) { return newv(v, 37, 39); }
 			});
 		}, 8);
-		
-	});
-		
-		
+	});	
+
+	
 </script>
 <style>
 
@@ -34,8 +33,7 @@
 		position:relative;
 		width:1000px; height:600px;
 		border:2px solid red;
-	}
-    
+	}    
 	#box {
 		position:absolute; top:580px; left:460px;
 		width:130px; height:20px;          
@@ -44,20 +42,20 @@
 
 </style>
 </head>
-
 <body>
 		<div class='hizala' style='margin-top:5px; margin-left:170px;'>
 			<div id="pane">
-					<canvas id="drawball" width="1000px" height="580px"></canvas>					
-				<div id="box"></div>
+					<canvas id="ball" width="1000px" height="580px" ></canvas>					
+				<div id="box" ></div>
 			</div>
-			<p style='text-align:center;'>
+			<p id="demo" style='text-align:center;'>
 			  Mavi çubuğu hareket ettirmek için yön tuşlarını kullanın!
 			</p>
+			<p id="demo1"></p>
 		</div>
 		
 		<script>
-			var canvas = document.getElementById("drawball");
+			var canvas = document.getElementById("ball");
 			var c = canvas.getContext("2d");
 			var container = {
 			  x: 0,
@@ -74,8 +72,8 @@
 			  vy: 4,
 			  color: 125
 			
-			}];
-
+			}];		
+			
 			function animate() {
 			  c.fillStyle = '#ffffff';
 			  c.fillRect(container.x, container.y, container.width, container.height);
@@ -84,18 +82,33 @@
 			  c.beginPath();
 			  c.arc(circles[0].x, circles[0].y, circles[0].r, 0, Math.PI * 2, true);
 			  c.fill()
-
+			  
 				if (circles[0].x - circles[0].r + circles[0].vx < container.x || circles[0].x + circles[0].r + circles[0].vx > container.x + container.width) {
-				  circles[0].vx = -circles[0].vx;
+				  circles[0].vx = -circles[0].vx;					
 				}
+				
 
-				if (circles[0].y - circles[0].r + circles[0].vy < container.y || circles[0].y + circles[0].r + circles[0].vy > container.y + container.height) {
-				  circles[0].vy = -circles[0].vy;
+				if (circles[0].y - circles[0].r + circles[0].vy < container.y ) {
+				  circles[0].vy = -circles[0].vy;	
+					
 				}
+				if (circles[0].y + circles[0].r + circles[0].vy > container.y + container.height) {
+				 
+					boxsol = $("#box").position().left;
+					boxsag = $("#box").position().left + 130;
+					
+					if( boxsol < circles[0].x && circles[0].x < boxsag	){
+						circles[0].vy = -circles[0].vy;
+					}					
+					else{			
+						alert("Kaybettiniz");
+						circles[0].vy = -circles[0].vy;
+					}
+				}			
 
 				circles[0].x += circles[0].vx
 				circles[0].y += circles[0].vy
-			 
+				
 			  requestAnimationFrame(animate);
 			}
 			requestAnimationFrame(animate);
