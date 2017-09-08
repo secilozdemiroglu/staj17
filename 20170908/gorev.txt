@@ -1,24 +1,26 @@
 - JSON nedir?
 
-	Json (Javascript Object Notation), Javascript uygulamaları için oluşturulmuş bir veri formatıdır.
+	Json (Javascript Object Notation), Javascript uygulamalarÄ± iÃ§in oluÅŸturulmuÅŸ bir veri formatÄ±dÄ±r.
 
 - Web servis nedir?
 
-	Web servisleri farklı uygulamaların ağ üzerinden haberleşmesini sağlayan ve iletişimini standart bir XML 
-	mesajlaşma sistemi kullanarak gerçekleştiren bir yazılım parçasıdır. XML veya json, bir web servisindeki tüm iletişimleri
-	kodlamak için kullanılır. 
+	Web servisleri farklÄ± uygulamalarÄ±n aÄŸ Ã¼zerinden haberleÅŸmesini saÄŸlayan ve iletiÅŸimini standart bir XML 
+	mesajlaÅŸma sistemi kullanarak gerÃ§ekleÅŸtiren bir yazÄ±lÄ±m parÃ§asÄ±dÄ±r. XML veya json, bir web servisindeki tÃ¼m iletiÅŸimleri
+	kodlamak iÃ§in kullanÄ±lÄ±r. 
 
 - Web servis client nedir?
 
-	Web servisine istekte bulunan yapıdır.
+	Web servisine istekte bulunan yapÄ±dÄ±r.
 
 - SOAP ve REST nedir?
 
-	SOAP (Simple Object Access Protocol), uygulamalar ile web servislerin bilgi aktarımını sağlayan XML tabanlı bir
-	protokoldür.
-	REST ile veri alış verişini JSON, XML hatta Text formatında yapılabilir.
+	SOAP (Simple Object Access Protocol), uygulamalar ile web servislerin bilgi aktarÄ±mÄ±nÄ± saÄŸlayan XML tabanlÄ± bir
+	protokoldÃ¼r.
+	
+	REST(REpresentational State Transfer), Client-Server arasÄ±nda veri alÄ±ÅŸ veriÅŸinin basit bir yoludur.REST ile 
+	veri alÄ±ÅŸ veriÅŸi JSON, XML hatta Text formatÄ±nda yapÄ±labilir.
 
 - WSDL nedir?
 
-	WSDL (Web Services Description Language), XML fromatında yazılmış ,Web Service'lerin yerlerini, ne iş yaptıklarını
-	yani metodlarını belirleyen bir dildir.
+	WSDL (Web Services Description Language), XML fromatÄ±nda yazÄ±lmÄ±ÅŸ ,Web Service'lerin yerlerini, ne iÅŸ yaptÄ±klarÄ±nÄ±
+	yani metodlarÄ±nÄ± belirleyen bir dildir.
