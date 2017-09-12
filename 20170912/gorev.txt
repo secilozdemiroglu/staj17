@@ -1,0 +1,7 @@
+ - AOP nedir?
+
+AOP(Aspect Oriented Programming)‘un yapmak üzere geliþtirildiði þey, birbiriyle kesiþen ilgileri (Cross-Cutting 
+Concerns) ve bu ilgilerin oluþturduðu karmaþýklýðý çözmektir. AOP, kesiþen ya da diðer bir deyiþle çakýþan ilgileri 
+modüler hale getirebilmek için sýnýf ve metotlarý barýndýrýr. Ýlgiler modüller halinde tek bir yerde ayrýþtýrýlýr ki 
+bu yaklaþým ilgilerin yönetimini kolaylaþtýrýr. 
+
